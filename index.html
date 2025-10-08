@@ -55,6 +55,9 @@
             color: #007BFF;
             animation: buttonmove 0.5s infinite;
             animation-timing-function: ease-in-out;
+            animation-delay: 1s
+            animation-iteration-count: 3;
+            animation-direction: alternate;   
         }
         .button:active {
             box-shadow: none;
@@ -64,10 +67,10 @@
         @keyframes buttonmove {
             0% { transform: translateY(0); }
             50% { transform: translateY(-5px);
-            scale: 2;
+            scale: 1.2;
             transform: rotate(0); }
             100% { transform: translateY(0);
-            scale: 2; }
+            scale: 1.2; }
             
         }
     </style>
@@ -79,7 +82,7 @@
     <main>
         <h2>About</h2>
         <p>This is a simple website for Aldawg. You can add more content here as needed.</p>
-    <div class="button">Test</div>
+    <div class="button">Playing with buttons</div>
     </main>
     
     
