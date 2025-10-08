@@ -54,6 +54,7 @@
             border-color: #2a4a6e;
             color: #007BFF;
             animation: buttonmove 0.5s infinite;
+            animation-timing-function: ease-in-out;
         }
         .button:active {
             box-shadow: none;
@@ -62,8 +63,11 @@
 
         @keyframes buttonmove {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0); }
+            50% { transform: translateY(-5px);
+            scale: 2;
+            transform: rotate(0); }
+            100% { transform: translateY(0);
+            scale: 2; }
             
         }
     </style>
