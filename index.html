@@ -36,9 +36,35 @@
         .button {
             background: #007BFF;
             color: white;
-            border: none;
-            padding: 0.5rem 1rem;
+            border: 2px solid #3d5f84;
+            padding: 5px 25px 5px 25px;
             cursor: pointer;
+            text-align: center;
+            display: inline-block;  
+            margin-top: 1rem;   
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+            width: 50px;
+            height: fit-content;
+            align-items: center;
+            font: 16pt sans-serif;
+        }
+        .button:hover {
+            background: white;
+            border-color: #2a4a6e;
+            color: #007BFF;
+            animation: buttonmove 0.5s infinite;
+        }
+        .button:active {
+            box-shadow: none;
+            transform: translateY(2px);
+        }
+
+        @keyframes buttonmove {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+            
         }
     </style>
 </head>
