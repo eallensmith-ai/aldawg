@@ -9,7 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: linear-gradient(to right,#300984, #4206c2);
+            align-items: center;
         }
         header {
             background: #333;
@@ -44,10 +45,11 @@
             margin-top: 1rem;   
             border-radius: 5px;
             box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
-            width: 50px;
+            width: auto;
             height: fit-content;
             align-items: center;
             font: 16pt sans-serif;
+            margin-left: calc(50% - 100px);
         }
         .button:hover {
             background: white;
@@ -73,6 +75,34 @@
             scale: 1.2; }
             
         }
+
+        .box {
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            border: #6fedef solid 10px;
+            box-shadow: #27b4b7 0px 0px 25px;
+            /*margin: 20px auto;*/
+            animation: boxmove 3s infinite;
+            /*animation-timing-function: ease-in-out;
+            animation-delay: 1s
+            animation-iteration-count: infinite;
+            animation-direction: alternate;*/   
+            margin-left: calc(50% - 50px);
+        }
+
+        @keyframes boxmove {
+            0% { transform: rotatex(0deg); }
+            16% { transform: rotatex(90deg); }
+            33% { transform: rotatex(180deg); 
+                transform: rotatez(0deg); }   
+            50% { transform: rotatey(90deg); }
+            66% { transform: rotatey(180deg); }
+            83% { transform: rotate(270deg); }
+            100% { transform: rotate(90deg); }
+            
+        }
     </style>
 </head>
 <body>
@@ -84,7 +114,8 @@
         <p>This is a simple website for Aldawg. You can add more content here as needed.</p>
     <div class="button">Playing with buttons</div>
     </main>
-    
+    <br>
+        <div class="box"></div>
     
     <footer>
         &copy; 2025 Aldawg. All rights reserved.
